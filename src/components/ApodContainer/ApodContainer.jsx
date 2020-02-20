@@ -23,7 +23,10 @@ const ApodContainer = () => {
     return (
         <section className="apod-container">
             <Title title={apodData.title} />
-            <DatePicker selected={selectedDate} onChange={date => setSelectedDate(date)} />
+            <div>
+                <h3>Select Date</h3>
+                <DatePicker selected={selectedDate} onChange={date => setSelectedDate(date)} />
+            </div>
             <Image url={apodData.url} />
             <Explanation explanation={apodData.explanation} />
         </section>
